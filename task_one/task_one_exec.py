@@ -1,4 +1,5 @@
 import logging
+import os
 
 log = logging.getLogger(__name__)
 
@@ -13,7 +14,8 @@ class TaskOne(object):
 
         try:
             ## YOUR ALGORITHM HERE
-
+            os.system('echo "Starting Kubernetes"')
+            os.system('kubectl apply -f bb.yaml')
             task_result["status"] = "Success"
 
         except Exception as e:
